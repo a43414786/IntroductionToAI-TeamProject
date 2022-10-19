@@ -44,8 +44,12 @@ class Dataset:
             pkl.dump(self.dataset,f)
 
     def loadData(self):
-        with open("dataset.pkl",'rb') as f:
-            self.dataset = pkl.load(f)
+        if(os.path.exists('dataset.pkl')):
+            with open("dataset.pkl",'rb') as f:
+                self.dataset = pkl.load(f)
+        else:
+            self.get_all_motion_data()
+            self.storeData()
 
 def train_valid_split():
     train_data = []
