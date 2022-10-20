@@ -2,3 +2,4 @@ dataset
 *.pkl
 *.npz
 model_folder
+*.hdf5
