@@ -278,7 +278,7 @@ if __name__ == "__main__":
 
     # preprocessing
     cfg = CSIModelConfig(win_len=500, step=50, thrshd=0.6, downsample=1)
-    numpy_tuple = cfg.preprocessing('CSV/', save=True)
+    numpy_tuple = cfg.preprocessing('dataset/', save=True)
     # load previous saved numpy files, ignore this if you haven't saved numpy array to files before
     # numpy_tuple = cfg.load_csi_data_from_files(('x_lie_down.npz', 'x_fall.npz', 'x_bend.npz', 'x_run.npz', 'x_sitdown.npz', 'x_standup.npz', 'x_walk.npz'))
     x_lie_down, y_lie_down, x_fall, y_fall, x_bend, y_bend, x_run, y_run, x_sitdown, y_sitdown, x_standup, y_standup, x_walk, y_walk = numpy_tuple

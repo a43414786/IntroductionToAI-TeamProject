@@ -1,2 +1,4 @@
 dataset
 *.pkl
+*.npz
+model_folder

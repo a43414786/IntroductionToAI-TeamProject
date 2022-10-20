@@ -51,7 +51,7 @@ class Dataset:
             self.get_all_motion_data()
             self.storeData()
 
-def train_valid_split():
+def train_valid_split(data,ratio):
     train_data = []
     train_label = []
     valid_data = []
